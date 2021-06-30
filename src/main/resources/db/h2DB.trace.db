@@ -1,0 +1,427 @@
+2021-06-30 21:02:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "JÖRDENS" not found; SQL statement:
+INSERT INTO Teachers (TeacherID, TeacherName)VALUES (1, Jördens); INSERT INTO Teachers VALUES (2, Schmidt);INSERT INTO Teachers VALUES (3, Schiesser) [42122-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at com.h2database@1.4.200/org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at com.h2database@1.4.200/org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareLocal(Session.java:657)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareCommand(Session.java:595)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.insertValues(Driver.java:63)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:11)
+2021-06-30 21:04:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "SCHMIDT" not found; SQL statement:
+INSERT INTO Teachers (TeacherID, TeacherName)VALUES (1, 'Jördens'); [42122-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at com.h2database@1.4.200/org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at com.h2database@1.4.200/org.h2.command.CommandList.executeRemaining(CommandList.java:46)
+	at com.h2database@1.4.200/org.h2.command.CommandList.update(CommandList.java:67)
+	at com.h2database@1.4.200/org.h2.command.Command.executeUpdate(Command.java:251)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:191)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:152)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.insertValues(Driver.java:64)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:11)
+2021-06-30 21:07:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "TEACHERS" because "CONSTRAINT_63" depends on it; SQL statement:
+DROP Table Teachers; [90107-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:98)
+	at com.h2database@1.4.200/org.h2.command.ddl.DropTable.update(DropTable.java:124)
+	at com.h2database@1.4.200/org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at com.h2database@1.4.200/org.h2.command.Command.executeUpdate(Command.java:251)
+	at com.h2database@1.4.200/org.h2.command.CommandList.update(CommandList.java:66)
+	at com.h2database@1.4.200/org.h2.command.Command.executeUpdate(Command.java:251)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:191)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:152)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.dropTables(Driver.java:98)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:10)
+2021-06-30 21:08:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "TEACHERS" because "CONSTRAINT_63" depends on it; SQL statement:
+DROP Table Teachers; [90107-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:98)
+	at com.h2database@1.4.200/org.h2.command.ddl.DropTable.update(DropTable.java:124)
+	at com.h2database@1.4.200/org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at com.h2database@1.4.200/org.h2.command.Command.executeUpdate(Command.java:251)
+	at com.h2database@1.4.200/org.h2.command.CommandList.update(CommandList.java:66)
+	at com.h2database@1.4.200/org.h2.command.Command.executeUpdate(Command.java:251)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:191)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:152)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.dropTables(Driver.java:98)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:10)
+2021-06-30 21:08:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ALGO" not found; SQL statement:
+INSERT INTO Courses VALUES (1, Algo, 2);INSERT INTO Courses VALUES (2, 'Biology', 1);INSERT INTO Courses VALUES (3, 'Software Engineering', 3); [42122-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at com.h2database@1.4.200/org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at com.h2database@1.4.200/org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareLocal(Session.java:657)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareCommand(Session.java:595)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.insertValues(Driver.java:68)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:12)
+2021-06-30 21:08:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ALGO" not found; SQL statement:
+INSERT INTO Courses VALUES (1, Algo, 2);INSERT INTO Courses VALUES (2, 'Biology', 1);INSERT INTO Courses VALUES (3, 'Software Engineering', 3); [42122-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at com.h2database@1.4.200/org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at com.h2database@1.4.200/org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareLocal(Session.java:657)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareCommand(Session.java:595)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.insertValues(Driver.java:68)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:12)
+2021-06-30 21:09:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Invalid value "0" for parameter "columnIndex" [90008-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:590)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.getInvalidValueException(DbException.java:280)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.checkColumnIndex(JdbcResultSet.java:3212)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3251)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:334)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.insertValues(Driver.java:75)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:12)
+2021-06-30 21:13:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "Jördens" [22018-200]
+2021-06-30 21:18:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM COURSES C FULL OUTER[*] JOIN TEACHERS T ON C.TEACHERID=T.TEACHERID"; SQL statement:
+SELECT * FROM Courses c FULL OUTER JOIN Teachers t ON c.TeacherID=t.TeacherID [42000-200]
+2021-06-30 21:27:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ALINA" not found; SQL statement:
+INSERT INTO Students VALUES (1, Alina);INSERT INTO Students VALUES (2, Tobias);INSERT INTO Students VALUES (3, Johanna);INSERT INTO Students VALUES (4, Kevin); [42122-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at com.h2database@1.4.200/org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at com.h2database@1.4.200/org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareLocal(Session.java:657)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareCommand(Session.java:595)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.insertValues(Driver.java:87)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:12)
+2021-06-30 21:31:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DROP TABLE STUDENTSDROP TABLE[*] STUDENTCOURSES"; SQL statement:
+DROP Table StudentsDROP Table StudentCourses [42000-200]
+2021-06-30 21:31:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS STUDENTCOURSES (COURSEID INT NOT NULL,STUDENTID INT NOT NULL,FOREIGN KEY (STUDENTID) REFERENCES STUDENTS(STUDENTID),FOREIGN KEY (COURSEID) REFERENCES COURSES(COURSEID);[*]);"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS StudentCourses (CourseID int NOT NULL,StudentID int NOT NULL,FOREIGN KEY (StudentID) REFERENCES Students(StudentID),FOREIGN KEY (CourseID) REFERENCES Courses(CourseID);); [42001-200]
+2021-06-30 21:31:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENTCOURSES" not found; SQL statement:
+DROP Table Courses; [42102-200]
+2021-06-30 21:31:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS STUDENTCOURSES (COURSEID INT NOT NULL,STUDENTID INT NOT NULL,FOREIGN KEY (STUDENTID) REFERENCES STUDENTS(STUDENTID),FOREIGN KEY (COURSEID) REFERENCES COURSES(COURSEID);[*]);"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS StudentCourses (CourseID int NOT NULL,StudentID int NOT NULL,FOREIGN KEY (StudentID) REFERENCES Students(StudentID),FOREIGN KEY (CourseID) REFERENCES Courses(CourseID);); [42001-200]
+2021-06-30 21:32:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS STUDENTCOURSES (COURSEID INT NOT NULL,STUDENTID INT NOT NULL,FOREIGN KEY (STUDENTID) REFERENCES STUDENTS(STUDENTID),FOREIGN KEY (COURSEID) REFERENCES COURSES(COURSEID);[*]);"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS StudentCourses (CourseID int NOT NULL,StudentID int NOT NULL,FOREIGN KEY (StudentID) REFERENCES Students(StudentID),FOREIGN KEY (CourseID) REFERENCES Courses(CourseID);); [42001-200]
+2021-06-30 21:38:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "COURSES" because "CONSTRAINT_17" depends on it; SQL statement:
+DROP Table IF EXISTS Courses; [90107-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:98)
+	at com.h2database@1.4.200/org.h2.command.ddl.DropTable.update(DropTable.java:124)
+	at com.h2database@1.4.200/org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at com.h2database@1.4.200/org.h2.command.Command.executeUpdate(Command.java:251)
+	at com.h2database@1.4.200/org.h2.command.CommandList.update(CommandList.java:66)
+	at com.h2database@1.4.200/org.h2.command.Command.executeUpdate(Command.java:251)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:191)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:152)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.dropTables(Driver.java:21)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:10)
+2021-06-30 21:38:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "COURSES" because "CONSTRAINT_17" depends on it; SQL statement:
+DROP Table IF EXISTS Courses; [90107-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:98)
+	at com.h2database@1.4.200/org.h2.command.ddl.DropTable.update(DropTable.java:124)
+	at com.h2database@1.4.200/org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at com.h2database@1.4.200/org.h2.command.Command.executeUpdate(Command.java:251)
+	at com.h2database@1.4.200/org.h2.command.CommandList.update(CommandList.java:66)
+	at com.h2database@1.4.200/org.h2.command.Command.executeUpdate(Command.java:251)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:191)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:152)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.dropTables(Driver.java:21)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:10)
+2021-06-30 21:38:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Method is only allowed for a query. Use execute or executeUpdate instead of executeQuery; SQL statement:
+ [90002-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:170)
+	at com.h2database@1.4.200/org.h2.command.Prepared.query(Prepared.java:231)
+	at com.h2database@1.4.200/org.h2.command.CommandContainer.query(CommandContainer.java:285)
+	at com.h2database@1.4.200/org.h2.command.Command.executeQuery(Command.java:195)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:114)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.getQuery1(Driver.java:171)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:16)
+2021-06-30 21:39:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "COURSES" because "CONSTRAINT_17" depends on it; SQL statement:
+DROP Table IF EXISTS Courses; [90107-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:98)
+	at com.h2database@1.4.200/org.h2.command.ddl.DropTable.update(DropTable.java:124)
+	at com.h2database@1.4.200/org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at com.h2database@1.4.200/org.h2.command.Command.executeUpdate(Command.java:251)
+	at com.h2database@1.4.200/org.h2.command.CommandList.update(CommandList.java:66)
+	at com.h2database@1.4.200/org.h2.command.Command.executeUpdate(Command.java:251)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:191)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:152)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.dropTables(Driver.java:21)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:10)
+2021-06-30 21:45:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM STUDENTCOURSES SC INNER JOIN STUDENTS S ON S.STUDENTID=SC.STUDENTIDGROUP BY[*] SC.STUDENTID"; SQL statement:
+SELECT * FROM StudentCourses sc INNER JOIN Students s ON s.StudentID=sc.StudentIDGROUP BY sc.StudentID [42000-200]
+2021-06-30 21:45:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "SC.COURSEID" must be in the GROUP BY list; SQL statement:
+SELECT * FROM StudentCourses sc INNER JOIN Students s ON s.StudentID=sc.StudentID GROUP BY sc.StudentID [90016-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:182)
+	at com.h2database@1.4.200/org.h2.command.dml.Select.updateAgg(Select.java:545)
+	at com.h2database@1.4.200/org.h2.command.dml.Select$LazyResultGroupSorted.fetchNextRow(Select.java:1924)
+	at com.h2database@1.4.200/org.h2.result.LazyResult.hasNext(LazyResult.java:101)
+	at com.h2database@1.4.200/org.h2.result.LazyResult.next(LazyResult.java:60)
+	at com.h2database@1.4.200/org.h2.command.dml.Select.queryGroupSorted(Select.java:319)
+	at com.h2database@1.4.200/org.h2.command.dml.Select.queryWithoutCache(Select.java:837)
+	at com.h2database@1.4.200/org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:201)
+	at com.h2database@1.4.200/org.h2.command.dml.Query.query(Query.java:489)
+	at com.h2database@1.4.200/org.h2.command.dml.Query.query(Query.java:451)
+	at com.h2database@1.4.200/org.h2.command.CommandContainer.query(CommandContainer.java:285)
+	at com.h2database@1.4.200/org.h2.command.Command.executeQuery(Command.java:195)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:114)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.getQuery1(Driver.java:172)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:16)
+2021-06-30 21:47:25 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT COUNT(STUDENTCOURSES.STUDENTID), STUDENTCOURSES.COURSEID FROM STUDENTCOURSES SC INNER JOIN STUDENTS S ON S.STUDENTID=SC.STUDENTID GROUP BY COUNT(STUDENTCOURSES[*].STUDENTID)"; SQL statement:
+SELECT COUNT(StudentCourses.StudentID), StudentCourses.CourseID FROM StudentCourses sc INNER JOIN Students s ON s.StudentID=sc.StudentID GROUP BY COUNT(StudentCourses.StudentID) [42000-200]
+2021-06-30 21:47:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT COUNT(STUDENTCOURSES.STUDENTID), STUDENTCOURSES.COURSEID FROM STUDENTCOURSES SC INNER JOIN STUDENTS S ON S.STUDENTID=SC.STUDENTID GROUP BY COUNT(STUDENTCOURSES[*].STUDENTID)"; SQL statement:
+SELECT COUNT(StudentCourses.StudentID), StudentCourses.CourseID FROM StudentCourses sc INNER JOIN Students s ON s.StudentID=sc.StudentID GROUP BY COUNT(StudentCourses.StudentID) [42000-200]
+2021-06-30 21:48:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT COUNT(STUDENTCOURSES.STUDENTID), STUDENTCOURSES.COURSEID FROM STUDENTCOURSES SC INNER JOIN STUDENTS S ON S.STUDENTID=SC.STUDENTID GROUP BY COUNT(STUDENTCOURSES[*].STUDENTID);"; SQL statement:
+SELECT COUNT(StudentCourses.StudentID), StudentCourses.CourseID FROM StudentCourses sc INNER JOIN Students s ON s.StudentID=sc.StudentID GROUP BY COUNT(StudentCourses.StudentID); [42000-200]
+2021-06-30 21:48:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "STUDENTCOURSES.STUDENTID" not found; SQL statement:
+SELECT COUNT(StudentCourses.StudentID), StudentCourses.CourseID FROM StudentCourses sc INNER JOIN Students s ON s.StudentID=sc.StudentID; [42122-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at com.h2database@1.4.200/org.h2.expression.aggregate.AbstractAggregate.optimize(AbstractAggregate.java:92)
+	at com.h2database@1.4.200/org.h2.expression.aggregate.Aggregate.optimize(Aggregate.java:705)
+	at com.h2database@1.4.200/org.h2.command.dml.Select.prepare(Select.java:1206)
+	at com.h2database@1.4.200/org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareLocal(Session.java:657)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareCommand(Session.java:595)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.getQuery1(Driver.java:171)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:16)
+2021-06-30 21:49:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Ambiguous column name "STUDENTID"; SQL statement:
+SELECT COUNT(StudentID), StudentCourses.CourseID FROM StudentCourses sc INNER JOIN Students s ON s.StudentID=sc.StudentID; [90059-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.mapColumn(ExpressionColumn.java:129)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.mapColumns(ExpressionColumn.java:107)
+	at com.h2database@1.4.200/org.h2.expression.aggregate.AbstractAggregate.mapColumnsAnalysis(AbstractAggregate.java:81)
+	at com.h2database@1.4.200/org.h2.expression.aggregate.Aggregate.mapColumnsAnalysis(Aggregate.java:700)
+	at com.h2database@1.4.200/org.h2.expression.analysis.DataAnalysisOperation.mapColumns(DataAnalysisOperation.java:133)
+	at com.h2database@1.4.200/org.h2.command.dml.Select.mapColumns(Select.java:1600)
+	at com.h2database@1.4.200/org.h2.command.dml.Select.init(Select.java:1125)
+	at com.h2database@1.4.200/org.h2.command.Parser.parseQuery(Parser.java:2627)
+	at com.h2database@1.4.200/org.h2.command.Parser.parsePrepared(Parser.java:868)
+	at com.h2database@1.4.200/org.h2.command.Parser.parse(Parser.java:843)
+	at com.h2database@1.4.200/org.h2.command.Parser.parse(Parser.java:815)
+	at com.h2database@1.4.200/org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareLocal(Session.java:657)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareCommand(Session.java:595)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.getQuery1(Driver.java:171)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:16)
+2021-06-30 21:49:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "STUDENTCOURSES.COURSEID" not found; SQL statement:
+SELECT COUNT(sc.StudentID), StudentCourses.CourseID FROM StudentCourses sc INNER JOIN Students s ON s.StudentID=sc.StudentID; [42122-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at com.h2database@1.4.200/org.h2.command.dml.Select.prepare(Select.java:1206)
+	at com.h2database@1.4.200/org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareLocal(Session.java:657)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareCommand(Session.java:595)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.getQuery1(Driver.java:171)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:16)
+2021-06-30 21:49:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "SC.COURSEID" must be in the GROUP BY list; SQL statement:
+SELECT COUNT(sc.StudentID), sc.CourseID FROM StudentCourses sc INNER JOIN Students s ON s.StudentID=sc.StudentID; [90016-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:182)
+	at com.h2database@1.4.200/org.h2.command.dml.Select.updateAgg(Select.java:545)
+	at com.h2database@1.4.200/org.h2.command.dml.Select.gatherGroup(Select.java:525)
+	at com.h2database@1.4.200/org.h2.command.dml.Select.queryGroup(Select.java:487)
+	at com.h2database@1.4.200/org.h2.command.dml.Select.queryWithoutCache(Select.java:839)
+	at com.h2database@1.4.200/org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:201)
+	at com.h2database@1.4.200/org.h2.command.dml.Query.query(Query.java:489)
+	at com.h2database@1.4.200/org.h2.command.dml.Query.query(Query.java:451)
+	at com.h2database@1.4.200/org.h2.command.CommandContainer.query(CommandContainer.java:285)
+	at com.h2database@1.4.200/org.h2.command.Command.executeQuery(Command.java:195)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:114)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.getQuery1(Driver.java:172)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:16)
+2021-06-30 21:50:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT COUNT(SC.STUDENTID), SC.COURSEID FROM STUDENTCOURSES SC INNER JOIN STUDENTS S ON S.STUDENTID=SC.STUDENTID GROUP BY COUNT(SC[*].STUDENTID);"; SQL statement:
+SELECT COUNT(sc.StudentID), sc.CourseID FROM StudentCourses sc INNER JOIN Students s ON s.StudentID=sc.StudentID GROUP BY COUNT(sc.StudentID); [42000-200]
+2021-06-30 21:50:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT COUNT(SC.STUDENTID), SC.COURSEID FROM STUDENTCOURSES SC INNER JOIN STUDENTS S ON S.STUDENTID=SC.STUDENTID GROUP BY COUNT(STUDENTID[*]);"; SQL statement:
+SELECT COUNT(sc.StudentID), sc.CourseID FROM StudentCourses sc INNER JOIN Students s ON s.StudentID=sc.StudentID GROUP BY COUNT(StudentID); [42000-200]
+2021-06-30 21:51:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT COUNT(SC.STUDENTID), SC.COURSEID FROM STUDENTCOURSES SC INNER JOIN STUDENTS S ON S.STUDENTID=SC.STUDENTID GROUP BY COUNT(SC[*].STUDENTID);"; SQL statement:
+SELECT COUNT(sc.StudentID), sc.CourseID FROM StudentCourses sc INNER JOIN Students s ON s.StudentID=sc.StudentID GROUP BY COUNT(sc.StudentID); [42000-200]
+2021-06-30 21:53:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "Students.StudentName" not found [42122-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3195)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:316)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.getQuery1(Driver.java:176)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:16)
+2021-06-30 21:53:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "s.StudentName" not found [42122-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3195)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:316)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.getQuery1(Driver.java:176)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:16)
+2021-06-30 21:53:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "StudentName" not found [42122-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3195)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:316)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.getQuery1(Driver.java:176)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:16)
+2021-06-30 21:54:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "s.StudentName" not found [42122-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3169)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:316)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.getQuery1(Driver.java:176)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:16)
+2021-06-30 21:55:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "SC.COURSEID" must be in the GROUP BY list; SQL statement:
+SELECT sc.StudentID, sc.CourseID, s.StudentName FROM StudentCourses sc INNER JOIN Students s ON s.StudentID=sc.StudentID GROUP BY sc.StudentID; [90016-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.expression.ExpressionColumn.updateAggregate(ExpressionColumn.java:182)
+	at com.h2database@1.4.200/org.h2.command.dml.Select.updateAgg(Select.java:545)
+	at com.h2database@1.4.200/org.h2.command.dml.Select$LazyResultGroupSorted.fetchNextRow(Select.java:1924)
+	at com.h2database@1.4.200/org.h2.result.LazyResult.hasNext(LazyResult.java:101)
+	at com.h2database@1.4.200/org.h2.result.LazyResult.next(LazyResult.java:60)
+	at com.h2database@1.4.200/org.h2.command.dml.Select.queryGroupSorted(Select.java:319)
+	at com.h2database@1.4.200/org.h2.command.dml.Select.queryWithoutCache(Select.java:837)
+	at com.h2database@1.4.200/org.h2.command.dml.Query.queryWithoutCacheLazyCheck(Query.java:201)
+	at com.h2database@1.4.200/org.h2.command.dml.Query.query(Query.java:489)
+	at com.h2database@1.4.200/org.h2.command.dml.Query.query(Query.java:451)
+	at com.h2database@1.4.200/org.h2.command.CommandContainer.query(CommandContainer.java:285)
+	at com.h2database@1.4.200/org.h2.command.Command.executeQuery(Command.java:195)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:114)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.getQuery1(Driver.java:173)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:16)
+2021-06-30 21:57:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "CourseID" not found [42122-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3169)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3268)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:316)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.jdbc.Driver.getQuery1(Driver.java:176)
+	at de.schmidtdennis.h2DB/de.schmidtdennis.Main.main(Main.java:16)
+2021-06-30 21:58:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT SC.STUDENTID, COUNT(SC.COURSEID) AS AMOUNT, S.STUDENTNAME FROM STUDENTCOURSES SC INNER JOIN STUDENTS S ON S.STUDENTID=SC.STUDENTID GROUP BY SC.STUDENTIDORDER BY[*] COUNT(SC.COURSEID) ASC;"; SQL statement:
+SELECT sc.StudentID, COUNT(sc.CourseID) AS amount, s.StudentName FROM StudentCourses sc INNER JOIN Students s ON s.StudentID=sc.StudentID GROUP BY sc.StudentIDORDER BY COUNT(sc.CourseID) ASC; [42000-200]
+2021-06-30 21:58:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT SC.STUDENTID, COUNT(SC.COURSEID) AS AMOUNT, S.STUDENTNAME FROM STUDENTCOURSES SC INNER JOIN STUDENTS S ON S.STUDENTID=SC.STUDENTID GROUP BY SC.STUDENTIDORDER BY[*] COUNT(SC.COURSEID) DESC;"; SQL statement:
+SELECT sc.StudentID, COUNT(sc.CourseID) AS amount, s.StudentName FROM StudentCourses sc INNER JOIN Students s ON s.StudentID=sc.StudentID GROUP BY sc.StudentIDORDER BY COUNT(sc.CourseID) DESC; [42000-200]
+2021-06-30 22:00:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO STUDENTS VALUES (4, 'Kevin')INSERT[*] INTO STUDENTS VALUES (5, 'Elena');"; SQL statement:
+INSERT INTO Students VALUES (4, 'Kevin')INSERT INTO Students VALUES (5, 'Elena'); [42000-200]
